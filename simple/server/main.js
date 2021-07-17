@@ -5,10 +5,6 @@ import Comments from '/imports/api/comments.js';
 
 import { emailExists, emailDoesNotExist } from "/imports/consts.js";
 
-Meteor.startup(() => {
-  Comments.insert({ email: "random@hotmail.com", text: "a comment", createdAt: new Date() });
-});
-
 Meteor.methods({
   checkIfEmailExists: function(email) {
     return Accounts.findUserByEmail(email) ? emailExists : emailDoesNotExist

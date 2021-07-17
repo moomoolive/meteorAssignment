@@ -14,7 +14,6 @@ export default function Comments() {
     const comments = useTracker(() => {
         return CommentsCollection.find({}, { sort: { createdAt: -1 } }).fetch()
     })
-    console.log(comments);
     const [commentText, setCommentText] = useState("");
 
     // check if user is authenticated on component load
