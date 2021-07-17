@@ -1,11 +1,36 @@
 import React from 'react';
-import { Hello } from './Hello.jsx';
-import { Info } from './Info.jsx';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
-export const App = () => (
-  <div>
-    <h1>Welcome to Meteor!</h1>
-    <Hello/>
-    <Info/>
-  </div>
-);
+import SignIn from './signIn';
+import Signup from './Signup';
+
+import globalStyles from '/imports/global-styles.css';
+
+export function App() {
+
+  return (
+    <div>
+      <Router>
+        <Switch>
+
+          <Route path="/" exact>
+            <SignIn/>
+          </Route>
+
+          <Route path="/create-account">
+            <Signup/>
+          </Route>
+
+          <Route path="/comments">
+            comments
+          </Route>
+
+        </Switch>
+      </Router>
+    </div>
+  )
+}
