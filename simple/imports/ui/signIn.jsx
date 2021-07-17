@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 import { useHistory } from 'react-router';
+import { useTracker } from 'meteor/react-meteor-data';
 
 import styles from '/imports/styles.css';
 
 export default function SignIn() {
     const [email, setEmail] = useState(""); 
     const [password, setPassword] = useState("");
+    const user = useTracker(() => Meteor.user());
 
     const history = useHistory();
+
+    // check if user is authenticated on component load
+    useEffect(() => {
+        if (user) {
+            history.push("/comments");
+        }
+    }, [])
     
     function onSubmit(event) {
         event.preventDefault();

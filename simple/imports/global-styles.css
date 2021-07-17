@@ -1,3 +1,11 @@
 button, input[type="submit"] {
     cursor: pointer;
 }
+
+body {
+    overflow-x: hidden;
+}
+
+label * {
+    margin-top: 10px;
+}

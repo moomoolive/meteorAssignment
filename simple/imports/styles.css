@@ -20,6 +20,7 @@
 .comment-container * {
     margin-top: 5px;
     margin-bottom: 5px;
+    width: 300px;
 }
 
 .all-comments-container {
@@ -28,8 +29,33 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
 }
 
 .comments-header {
     text-align: center;
+}
+
+.create-comment-container {
+    position: fixed;
+    bottom: 3px;
+    z-index: 2;
+}
+
+.comment-input-container {
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-input-text {
+    width: 69.2vw;
+    height: 30px;
+}
+
+.comment-input-submit-button {
+    width: 21vw;
+    height: 36px;
 }
