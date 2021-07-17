@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
 
-import SignIn from './signIn';
+import SignIn from './SignIn';
 import Signup from './Signup';
+import Comments from './Comments';
 
 import globalStyles from '/imports/global-styles.css';
 
@@ -26,7 +27,7 @@ export function App() {
           </Route>
 
           <Route path="/comments">
-            comments
+            <Comments/>
           </Route>
 
         </Switch>

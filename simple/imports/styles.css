@@ -10,3 +10,26 @@
 .create-account-button {
     margin-top: 25px;
 }
+
+.comment-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* all children elements of "comment-container" */
+.comment-container * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.all-comments-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.comments-header {
+    text-align: center;
+}
